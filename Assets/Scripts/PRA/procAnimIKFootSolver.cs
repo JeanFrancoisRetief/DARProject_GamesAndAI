@@ -80,7 +80,7 @@ public class procAnimIKFootSolver : MonoBehaviour
             Debug.Log(lerp);
 
             currentPos = tempPos;
-            currentNormal = Vector3.Lerp(oldNormal, newNormal, lerp);
+            //currentNormal = Vector3.Lerp(oldNormal, newNormal, lerp);
 
             lerp += Time.deltaTime * speed;
         }
