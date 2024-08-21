@@ -22,8 +22,6 @@ public class IKFootSolver : MonoBehaviour
     float lerp;
     int direction = 1;
 
-    [SerializeField] private Transform playerObject;
-
     private Quaternion startRot;
     private Quaternion endRot;
 
