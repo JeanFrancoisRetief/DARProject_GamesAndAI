@@ -22,6 +22,11 @@ public class IKFootSolver : MonoBehaviour
     float lerp;
     int direction = 1;
 
+    [SerializeField] private Transform playerObject;
+
+    private Quaternion startRot;
+    private Quaternion endRot;
+
     private void Start()
     {
         footSpacing = transform.position - body.position;
@@ -30,11 +35,15 @@ public class IKFootSolver : MonoBehaviour
         currentPosition = newPosition = oldPosition = transform.position;
         lerp = lerpTarget;
         parent = transform.parent;
+
+        startRot = transform.rotation;
+        endRot = body.rotation;
     }
 
     void Update()
     {
         transform.position = currentPosition;
+        //transform.rotation = playerObject.rotation;
 
         //Ray ray = new Ray(body.TransformPoint(footSpacing), Vector3.down);
         Ray ray = new Ray(body.position + footSpacing, Vector3.down);
@@ -45,9 +54,11 @@ public class IKFootSolver : MonoBehaviour
             if (CheckTargetPointDistance(transform.position) > stepDistance && !otherFoot.IsMoving() && lerp >= lerpTarget)
             {
                 lerp = 0;
-                direction = body.InverseTransformPoint(info.point).z > body.InverseTransformPoint(newPosition).z ? 1 : -1;
+                //direction = body.InverseTransformPoint(info.point).z > body.InverseTransformPoint(newPosition).z ? 1 : -1;
+                direction = body.TransformDirection(info.point).z > body.TransformDirection(newPosition).z ? 1 : -1;
 
-                newPosition = info.point + (body.forward * direction * overheadAmount) + footOffset;
+                //newPosition = info.point + (body.forward * direction * overheadAmount) + footOffset;
+                newPosition = info.point + (body.position * direction * overheadAmount) + footOffset;
             }
         }
 
@@ -56,6 +67,8 @@ public class IKFootSolver : MonoBehaviour
             Vector3 tempPosition = Vector3.Lerp(oldPosition, newPosition, lerp);
             tempPosition.y += Mathf.Sin(lerp * Mathf.PI) * stepHeight;
 
+            transform.rotation = Quaternion.Slerp(startRot, endRot, lerp);
+
             currentPosition = tempPosition;
             lerp += Time.deltaTime * speed;
         }
@@ -63,6 +76,8 @@ public class IKFootSolver : MonoBehaviour
         {
             oldPosition = newPosition;
         }
+
+        //Debug.Log(transform.localPosition);
     }
     // private Vector3 PointRelativeToTheBody(Vector3 pivot, Vector3 angles)
     // {
