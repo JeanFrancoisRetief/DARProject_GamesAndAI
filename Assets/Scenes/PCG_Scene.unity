@@ -2288,14 +2288,10 @@ MonoBehaviour:
     minPosition: {x: 0, y: 0}
     maxPosition: {x: 10, y: 10}
     obligatory: 0
-  - room: {fileID: 1490987690650036324, guid: 97d15f2861c35084e9fe548668688a7d, type: 3}
+  - room: {fileID: 1490987690650036324, guid: 551290c11883bf84aa350c5bb74547a7, type: 3}
     minPosition: {x: 5, y: 5}
     maxPosition: {x: 10, y: 10}
     obligatory: 0
-  - room: {fileID: 1490987690650036324, guid: 46b89fc834c32ce449513ae68598b243, type: 3}
-    minPosition: {x: 9, y: 9}
-    maxPosition: {x: 10, y: 10}
-    obligatory: 1
   offset: {x: 60, y: 60}
 --- !u!4 &1831022165
 Transform:
