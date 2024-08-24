@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 3924444041077408493}
   - component: {fileID: 5790455951542401096}
   - component: {fileID: 4224601103594796993}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Step_T
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,6 @@ MonoBehaviour:
   - {fileID: 1154562675687750469}
   - {fileID: 5352528104045205203}
   - {fileID: 4474870219355615164}
-  doors: []
 --- !u!1 &2999174606979021785
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,7 +355,7 @@ GameObject:
   - component: {fileID: 6085471447801896110}
   - component: {fileID: 4004137842102213339}
   - component: {fileID: 5011319700702939716}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Step_L_Out
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -451,7 +450,7 @@ GameObject:
   - component: {fileID: 9168141895961589721}
   - component: {fileID: 6906025927469186873}
   - component: {fileID: 7613693978144645318}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Step_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -770,7 +769,7 @@ GameObject:
   - component: {fileID: 8513149156347915543}
   - component: {fileID: 5211319540960759666}
   - component: {fileID: 5958345453535569099}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Step_B_Out
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -964,7 +963,7 @@ GameObject:
   - component: {fileID: 1547770813624646658}
   - component: {fileID: 4472879886261637613}
   - component: {fileID: 2661174784252849326}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Step_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1059,7 +1058,7 @@ GameObject:
   - component: {fileID: 533504263449257004}
   - component: {fileID: 2101496230301993987}
   - component: {fileID: 6032685752578315301}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1155,7 +1154,7 @@ GameObject:
   - component: {fileID: 678734260801504145}
   - component: {fileID: 2060128084746573695}
   - component: {fileID: 2905177745195804628}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Step_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1250,7 +1249,7 @@ GameObject:
   - component: {fileID: 5536402216459875368}
   - component: {fileID: 3207023775701526462}
   - component: {fileID: 1034618727164556887}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Step_T_Out
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1345,7 +1344,7 @@ GameObject:
   - component: {fileID: 967487283920674195}
   - component: {fileID: 7575934724450831428}
   - component: {fileID: 5214548285377998996}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Step_R_Out
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1500,6 +1499,10 @@ PrefabInstance:
       value: QuarterPipe_R_Out
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 363098eff72481546a63733a02e69fd6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 363098eff72481546a63733a02e69fd6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -1599,6 +1602,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 363098eff72481546a63733a02e69fd6, type: 3}
       propertyPath: m_Name
       value: QuarterPipe_L
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 363098eff72481546a63733a02e69fd6, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 363098eff72481546a63733a02e69fd6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1702,6 +1709,10 @@ PrefabInstance:
       value: QuarterPipe_T_Out
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 363098eff72481546a63733a02e69fd6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 363098eff72481546a63733a02e69fd6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -1801,6 +1812,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 363098eff72481546a63733a02e69fd6, type: 3}
       propertyPath: m_Name
       value: QuarterPipe_B
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 363098eff72481546a63733a02e69fd6, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 363098eff72481546a63733a02e69fd6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1904,6 +1919,10 @@ PrefabInstance:
       value: QuarterPipe_L_Out
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 363098eff72481546a63733a02e69fd6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 363098eff72481546a63733a02e69fd6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -2003,6 +2022,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 363098eff72481546a63733a02e69fd6, type: 3}
       propertyPath: m_Name
       value: QuarterPipe_B_Out
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 363098eff72481546a63733a02e69fd6, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 363098eff72481546a63733a02e69fd6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2106,6 +2129,10 @@ PrefabInstance:
       value: QuarterPipe_T
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 363098eff72481546a63733a02e69fd6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 363098eff72481546a63733a02e69fd6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -2205,6 +2232,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 363098eff72481546a63733a02e69fd6, type: 3}
       propertyPath: m_Name
       value: QuarterPipe_R
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 363098eff72481546a63733a02e69fd6, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 363098eff72481546a63733a02e69fd6, type: 3}
       propertyPath: m_StaticEditorFlags
