@@ -196,11 +196,11 @@ MonoBehaviour:
   terrainLayer:
     serializedVersion: 2
     m_Bits: 64
-  speed: 8
-  stepDistance: 0.8
+  speed: 12
+  stepDistance: 0.51
   overheadAmount: 0
   stepHeight: 0.8
-  lerpTarget: 1
+  lerpTarget: 1.1
   footOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1015039672055767580
 GameObject:
@@ -454,11 +454,11 @@ MonoBehaviour:
   terrainLayer:
     serializedVersion: 2
     m_Bits: 64
-  speed: 8
-  stepDistance: 0.92
+  speed: 12
+  stepDistance: 0.45
   overheadAmount: 0
   stepHeight: 0.8
-  lerpTarget: 1
+  lerpTarget: 1.1
   footOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1015039672382060871
 GameObject:
@@ -658,11 +658,11 @@ MonoBehaviour:
   terrainLayer:
     serializedVersion: 2
     m_Bits: 64
-  speed: 8
-  stepDistance: 0.68
+  speed: 12
+  stepDistance: 0.5
   overheadAmount: 0
   stepHeight: 0.8
-  lerpTarget: 1
+  lerpTarget: 1.1
   footOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1015039672689613911
 GameObject:
@@ -712,11 +712,11 @@ MonoBehaviour:
   terrainLayer:
     serializedVersion: 2
     m_Bits: 64
-  speed: 8
-  stepDistance: 0.8
+  speed: 12
+  stepDistance: 0.55
   overheadAmount: 0
   stepHeight: 0.8
-  lerpTarget: 1
+  lerpTarget: 1.1
   footOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1015039672691710566
 GameObject:
@@ -796,11 +796,11 @@ MonoBehaviour:
   terrainLayer:
     serializedVersion: 2
     m_Bits: 64
-  speed: 8
-  stepDistance: 0.8
+  speed: 12
+  stepDistance: 0.43
   overheadAmount: 0
   stepHeight: 0.8
-  lerpTarget: 1
+  lerpTarget: 1.1
   footOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1015039672872923859
 GameObject:
@@ -850,11 +850,11 @@ MonoBehaviour:
   terrainLayer:
     serializedVersion: 2
     m_Bits: 64
-  speed: 8
-  stepDistance: 0.68
+  speed: 12
+  stepDistance: 0.58
   overheadAmount: 0
   stepHeight: 0.8
-  lerpTarget: 1
+  lerpTarget: 1.1
   footOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1015039672888467563
 GameObject:
@@ -1050,11 +1050,11 @@ MonoBehaviour:
   terrainLayer:
     serializedVersion: 2
     m_Bits: 64
-  speed: 8
-  stepDistance: 0.92
+  speed: 12
+  stepDistance: 0.4
   overheadAmount: 0
   stepHeight: 0.8
-  lerpTarget: 1
+  lerpTarget: 1.1
   footOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1015039673099352605
 GameObject:
@@ -1104,11 +1104,11 @@ MonoBehaviour:
   terrainLayer:
     serializedVersion: 2
     m_Bits: 64
-  speed: 8
-  stepDistance: 0.9
+  speed: 12
+  stepDistance: 0.6
   overheadAmount: 0
   stepHeight: 0.8
-  lerpTarget: 1
+  lerpTarget: 1.1
   footOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1015039673309204020
 GameObject:
