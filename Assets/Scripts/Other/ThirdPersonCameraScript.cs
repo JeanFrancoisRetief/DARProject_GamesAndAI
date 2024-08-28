@@ -14,6 +14,8 @@ public class ThirdPersonCameraScript : MonoBehaviour
     public float rotationSpeed;
 
     public Transform combatLookAt;
+
+
     public enum CameraStyle
     {
         Exploration,
@@ -21,9 +23,10 @@ public class ThirdPersonCameraScript : MonoBehaviour
         Topdown
     }
     public CameraStyle currentCamStyle;
-    //public GameObject ExploreCam;
-    //public GameObject CombatCam;
     public GameObject TopDownCam;
+    //public GameObject ExploreCam;
+    public GameObject CombatCam;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +42,7 @@ public class ThirdPersonCameraScript : MonoBehaviour
         Vector3 viewDir = player.position - new Vector3(transform.position.x, player.position.y, transform.position.z);
         orientation.forward = viewDir.normalized;
         //rotate player obj
-        if(currentCamStyle == CameraStyle.Exploration)
+        if(currentCamStyle == CameraStyle.Topdown)
         {
             float horizontalInput = Input.GetAxis("Horizontal");
             float veritcalInput = Input.GetAxis("Vertical");
@@ -60,25 +63,25 @@ public class ThirdPersonCameraScript : MonoBehaviour
         }
 
         //TEMPORY_____forTESTpurposes______________________________________________________________________________________________________________
-        /*if(Input.GetKeyDown(KeyCode.C))
+        if(Input.GetKeyDown(KeyCode.C))
         {
             SwitchCamType(CameraStyle.Combat);
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            SwitchCamType(CameraStyle.Exploration);
-        }*/
+            SwitchCamType(CameraStyle.Topdown);
+        }
         //_________________________________________________________________________________________________________________________________________
     }
 
-    /*private void SwitchCamType(CameraStyle newStyle)
+    private void SwitchCamType(CameraStyle newStyle)
     {
-        ExploreCam.SetActive(false);
+        TopDownCam.SetActive(false);
         CombatCam.SetActive(false);
 
-        if (newStyle == CameraStyle.Exploration) ExploreCam.SetActive(true);
+        if (newStyle == CameraStyle.Topdown) TopDownCam.SetActive(true);
         if (newStyle == CameraStyle.Combat) CombatCam.SetActive(true);
 
         currentCamStyle = newStyle;
-    }*/
+    }
 }
