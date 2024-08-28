@@ -26,12 +26,16 @@ public class ThirdPersonCameraScript : MonoBehaviour
     public GameObject TopDownCam;
     //public GameObject ExploreCam;
     public GameObject CombatCam;
+
+    public GameObject Gun;
     
     // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        Gun.SetActive(false);
 
     }
 
@@ -63,11 +67,20 @@ public class ThirdPersonCameraScript : MonoBehaviour
         }
 
         //TEMPORY_____forTESTpurposes______________________________________________________________________________________________________________
-        if(Input.GetKeyDown(KeyCode.C))
+        /*if(Input.GetKeyDown(KeyCode.C))
         {
             SwitchCamType(CameraStyle.Combat);
         }
         if (Input.GetKeyDown(KeyCode.E))
+        {
+            SwitchCamType(CameraStyle.Topdown);
+        }*/
+
+        if(Input.GetKey(KeyCode.Mouse1))
+        {
+            SwitchCamType(CameraStyle.Combat);
+        }
+        else
         {
             SwitchCamType(CameraStyle.Topdown);
         }
@@ -76,11 +89,16 @@ public class ThirdPersonCameraScript : MonoBehaviour
 
     private void SwitchCamType(CameraStyle newStyle)
     {
-        TopDownCam.SetActive(false);
-        CombatCam.SetActive(false);
+        
+        
 
         if (newStyle == CameraStyle.Topdown) TopDownCam.SetActive(true);
+        if (newStyle == CameraStyle.Topdown) CombatCam.SetActive(false);
+        if (newStyle == CameraStyle.Topdown) Gun.SetActive(false);
+
         if (newStyle == CameraStyle.Combat) CombatCam.SetActive(true);
+        if (newStyle == CameraStyle.Combat) TopDownCam.SetActive(false);
+        if (newStyle == CameraStyle.Combat) Gun.SetActive(true);
 
         currentCamStyle = newStyle;
     }
