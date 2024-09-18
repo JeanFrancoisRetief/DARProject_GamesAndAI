@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 9171851563455554885}
   - component: {fileID: 8107039195329501528}
+  - component: {fileID: -1088244633340372593}
+  - component: {fileID: 7073577801499165073}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -53,6 +55,41 @@ MonoBehaviour:
   RoachObj: {fileID: 3864124096259354851}
   PrawnObj: {fileID: 4520364635829881998}
   currentEnemyType: 0
+--- !u!195 &-1088244633340372593
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9171851563455554886}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &7073577801499165073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9171851563455554886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dde79c893514a2e4a84e7ef500c4a1a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 0
 --- !u!1001 &3637473079269913055
 PrefabInstance:
   m_ObjectHideFlags: 0

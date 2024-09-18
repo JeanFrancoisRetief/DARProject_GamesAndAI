@@ -8,11 +8,12 @@ public class EnemyMovement : MonoBehaviour
     NavMeshAgent Enemy;
     GameObject Player;
     public float distance;
+
     // Start is called before the first frame update
     void Start()
     {
         Enemy = GetComponent<NavMeshAgent>();
-        Player = GameObject.FindGameObjectWithTag("PlayerTarget");
+        Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
