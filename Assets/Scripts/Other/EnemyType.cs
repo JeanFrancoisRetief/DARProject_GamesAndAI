@@ -7,7 +7,7 @@ public class EnemyType : MonoBehaviour
     public GameObject NatObj;
     public GameObject RoachObj;
     public GameObject PrawnObj;
-    //public GameObject RatObj;
+    public GameObject RatObj;
     //public GameObject CrocObj;
 
     public enum Enemy_Type
@@ -38,7 +38,7 @@ public class EnemyType : MonoBehaviour
         }
         if (currentEnemyType == Enemy_Type.Rat)
         {
-            //RatObj.SetActive(true);
+            RatObj.SetActive(true);
         }
         if (currentEnemyType == Enemy_Type.Croc)
         {
