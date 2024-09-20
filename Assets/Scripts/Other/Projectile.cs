@@ -72,7 +72,11 @@ public class Projectile : MonoBehaviour
 
     void Ammo()
     {
-        framecounter++;
+        if(ammoCount < 8)
+        {
+            framecounter++;
+        }
+        
 
         if(framecounter >= 60*ammoReloadTimeInSec && ammoCount < 8)
         {

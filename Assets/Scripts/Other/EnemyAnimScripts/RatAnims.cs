@@ -19,7 +19,6 @@ public class RatAnims : MonoBehaviour
         if (enemyScript.distance > 20)
         {
             ratAnimator.SetBool("InRange", false);
-            ratAnimator.SetBool("AttackRange", false);
         }
         else
         {
@@ -33,7 +32,6 @@ public class RatAnims : MonoBehaviour
         else
         {
             ratAnimator.SetBool("AttackRange", true);
-            ratAnimator.SetBool("InRange", true);
         }
     }
 }

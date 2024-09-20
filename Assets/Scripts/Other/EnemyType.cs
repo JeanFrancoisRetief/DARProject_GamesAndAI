@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyType : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class EnemyType : MonoBehaviour
     public GameObject PrawnObj;
     public GameObject RatObj;
     //public GameObject CrocObj;
+
+    private NavMeshAgent enemyNavMeshAgent;
 
     public enum Enemy_Type
     {
@@ -24,7 +27,10 @@ public class EnemyType : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(currentEnemyType == Enemy_Type.Nat)
+        enemyNavMeshAgent = gameObject.GetComponent<NavMeshAgent>();
+
+
+        if (currentEnemyType == Enemy_Type.Nat)
         {
             NatObj.SetActive(true);
         }
@@ -39,6 +45,7 @@ public class EnemyType : MonoBehaviour
         if (currentEnemyType == Enemy_Type.Rat)
         {
             RatObj.SetActive(true);
+            enemyNavMeshAgent.speed = 14;
         }
         if (currentEnemyType == Enemy_Type.Croc)
         {
