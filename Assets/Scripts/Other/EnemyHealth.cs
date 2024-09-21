@@ -6,6 +6,7 @@ public class EnemyHealth : MonoBehaviour
 {
     public int Health;
     public EnemyType enemyTypeScript;
+    public GameObject deathBlood;
 
     private GameObject scriptHolderObj;
     private Score scoreScript;
@@ -14,9 +15,7 @@ public class EnemyHealth : MonoBehaviour
     {
         scriptHolderObj = GameObject.Find("ScriptHolder");
         scoreScript = scriptHolderObj.GetComponent<Score>();
-        
-
-
+       
         //Player Damage = '1';
         if (enemyTypeScript.currentEnemyType == EnemyType.Enemy_Type.Nat)
         {
@@ -46,6 +45,8 @@ public class EnemyHealth : MonoBehaviour
             Health = 20;
             scoreScript.TotalEnemies++;
         }
+
+        deathBlood.SetActive(false);
     }
 
     // Update is called once per frame
@@ -53,9 +54,18 @@ public class EnemyHealth : MonoBehaviour
     {
         if (Health <= 0)
         {
-            scoreScript.EnemiesDefeated++;
-            gameObject.SetActive(false);
+            StartCoroutine(enemeyDeath());
         }
+    }
+
+    public IEnumerator enemeyDeath()
+    {
+        scoreScript.EnemiesDefeated++;
+        deathBlood.SetActive(true);
+
+        yield return new WaitForSeconds(1);
+
+        gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
