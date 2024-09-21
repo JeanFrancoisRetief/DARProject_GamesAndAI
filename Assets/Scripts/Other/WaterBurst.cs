@@ -28,6 +28,8 @@ public class WaterBurst : MonoBehaviour
 
             //++ pipe bursts covered - add later
             scoreScript.DrainsBlocked++;
+
+            other.gameObject.SetActive(false);
         }
     }
 }
