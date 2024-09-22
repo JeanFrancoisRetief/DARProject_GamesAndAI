@@ -20,6 +20,9 @@ public class PlayerHealth : MonoBehaviour
     public GameObject BloodSplatterImage9;
     public GameObject BloodSplatterImage10;
 
+    public GameObject BloodDrops1;
+    public GameObject BloodDrops2;
+
 
     // Start is called before the first frame update
     void Start()
@@ -69,6 +72,9 @@ public class PlayerHealth : MonoBehaviour
             BloodSplatterImage8.SetActive(false);
             BloodSplatterImage9.SetActive(false);
             BloodSplatterImage10.SetActive(false);
+
+            BloodDrops1.SetActive(false);
+            BloodDrops2.SetActive(true);
         }
         else if(Health <= 20)
         {
@@ -82,6 +88,9 @@ public class PlayerHealth : MonoBehaviour
             BloodSplatterImage8.SetActive(false);
             BloodSplatterImage9.SetActive(false);
             BloodSplatterImage10.SetActive(false);
+
+            BloodDrops1.SetActive(false);
+            BloodDrops2.SetActive(true);
         }
         else if (Health <= 30)
         {
@@ -95,6 +104,9 @@ public class PlayerHealth : MonoBehaviour
             BloodSplatterImage8.SetActive(false);
             BloodSplatterImage9.SetActive(false);
             BloodSplatterImage10.SetActive(false);
+
+            BloodDrops1.SetActive(false);
+            BloodDrops2.SetActive(true);
         }
         else if (Health <= 40)
         {
@@ -108,6 +120,9 @@ public class PlayerHealth : MonoBehaviour
             BloodSplatterImage8.SetActive(false);
             BloodSplatterImage9.SetActive(false);
             BloodSplatterImage10.SetActive(false);
+
+            BloodDrops1.SetActive(true);
+            BloodDrops2.SetActive(false);
         }
         else if (Health <= 50)
         {
@@ -121,6 +136,9 @@ public class PlayerHealth : MonoBehaviour
             BloodSplatterImage8.SetActive(false);
             BloodSplatterImage9.SetActive(false);
             BloodSplatterImage10.SetActive(false);
+
+            BloodDrops1.SetActive(true);
+            BloodDrops2.SetActive(false);
         }
         else if (Health <= 60)
         {
@@ -134,6 +152,9 @@ public class PlayerHealth : MonoBehaviour
             BloodSplatterImage8.SetActive(false);
             BloodSplatterImage9.SetActive(false);
             BloodSplatterImage10.SetActive(false);
+
+            BloodDrops1.SetActive(true);
+            BloodDrops2.SetActive(false);
         }
         else if (Health <= 70)
         {
@@ -147,6 +168,9 @@ public class PlayerHealth : MonoBehaviour
             BloodSplatterImage8.SetActive(false);
             BloodSplatterImage9.SetActive(false);
             BloodSplatterImage10.SetActive(false);
+
+            BloodDrops1.SetActive(false);
+            BloodDrops2.SetActive(false);
         }
         else if (Health <= 80)
         {
@@ -160,6 +184,9 @@ public class PlayerHealth : MonoBehaviour
             BloodSplatterImage8.SetActive(true);
             BloodSplatterImage9.SetActive(false);
             BloodSplatterImage10.SetActive(false);
+
+            BloodDrops1.SetActive(false);
+            BloodDrops2.SetActive(false);
         }
         else if (Health <= 90)
         {
@@ -173,6 +200,9 @@ public class PlayerHealth : MonoBehaviour
             BloodSplatterImage8.SetActive(false);
             BloodSplatterImage9.SetActive(true);
             BloodSplatterImage10.SetActive(false);
+
+            BloodDrops1.SetActive(false);
+            BloodDrops2.SetActive(false);
         }
         else if (Health < 100)
         {
@@ -186,6 +216,9 @@ public class PlayerHealth : MonoBehaviour
             BloodSplatterImage8.SetActive(false);
             BloodSplatterImage9.SetActive(false);
             BloodSplatterImage10.SetActive(true);
+
+            BloodDrops1.SetActive(false);
+            BloodDrops2.SetActive(false);
         }
         else if (Health == 100)
         {
@@ -199,6 +232,9 @@ public class PlayerHealth : MonoBehaviour
             BloodSplatterImage8.SetActive(false);
             BloodSplatterImage9.SetActive(false);
             BloodSplatterImage10.SetActive(false);
+
+            BloodDrops1.SetActive(false);
+            BloodDrops2.SetActive(false);
         }
 
 
