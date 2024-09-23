@@ -10,6 +10,7 @@ public class EnemyHealth : MonoBehaviour
 
     private GameObject scriptHolderObj;
     private Score scoreScript;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,7 +47,7 @@ public class EnemyHealth : MonoBehaviour
             scoreScript.TotalEnemies++;
         }
 
-        deathBlood.SetActive(false);
+        deathBlood.SetActive(true);
     }
 
     // Update is called once per frame
@@ -63,7 +64,7 @@ public class EnemyHealth : MonoBehaviour
         scoreScript.EnemiesDefeated++;
         deathBlood.SetActive(true);
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
 
         gameObject.SetActive(false);
     }

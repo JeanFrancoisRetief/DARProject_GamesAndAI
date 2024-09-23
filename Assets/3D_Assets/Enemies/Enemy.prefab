@@ -505,6 +505,78 @@ PrefabInstance:
       propertyPath: m_Name
       value: ps_enemyDeath
       objectReference: {fileID: 0}
+    - target: {fileID: 2642735360933552477, guid: 3519925e490d93a4aa46427395b2f1fa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461638043938236594, guid: 3519925e490d93a4aa46427395b2f1fa, type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461638043938236594, guid: 3519925e490d93a4aa46427395b2f1fa, type: 3}
+      propertyPath: lengthInSec
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461638043938236594, guid: 3519925e490d93a4aa46427395b2f1fa, type: 3}
+      propertyPath: InitialModule.size3D
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461638043938236594, guid: 3519925e490d93a4aa46427395b2f1fa, type: 3}
+      propertyPath: InitialModule.rotation3D
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461638043938236594, guid: 3519925e490d93a4aa46427395b2f1fa, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461638043938236594, guid: 3519925e490d93a4aa46427395b2f1fa, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461638043938236594, guid: 3519925e490d93a4aa46427395b2f1fa, type: 3}
+      propertyPath: InitialModule.startSize.minMaxState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461638043938236594, guid: 3519925e490d93a4aa46427395b2f1fa, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461638043938236594, guid: 3519925e490d93a4aa46427395b2f1fa, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461638043938236594, guid: 3519925e490d93a4aa46427395b2f1fa, type: 3}
+      propertyPath: InitialModule.startSize.maxCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461638043938236594, guid: 3519925e490d93a4aa46427395b2f1fa, type: 3}
+      propertyPath: InitialModule.startSize.maxCurve.m_Curve.Array.data[0].value
+      value: 0.38461304
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461638043938236594, guid: 3519925e490d93a4aa46427395b2f1fa, type: 3}
+      propertyPath: InitialModule.startSize.maxCurve.m_Curve.Array.data[0].inSlope
+      value: 0.61538696
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461638043938236594, guid: 3519925e490d93a4aa46427395b2f1fa, type: 3}
+      propertyPath: InitialModule.startSize.maxCurve.m_Curve.Array.data[1].inSlope
+      value: 0.61538696
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461638043938236594, guid: 3519925e490d93a4aa46427395b2f1fa, type: 3}
+      propertyPath: InitialModule.startSize.maxCurve.m_Curve.Array.data[0].outSlope
+      value: 0.61538696
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461638043938236594, guid: 3519925e490d93a4aa46427395b2f1fa, type: 3}
+      propertyPath: InitialModule.startSize.maxCurve.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461638043938236594, guid: 3519925e490d93a4aa46427395b2f1fa, type: 3}
+      propertyPath: InitialModule.startSize.maxCurve.m_Curve.Array.data[1].outSlope
+      value: 0.61538696
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461638043938236594, guid: 3519925e490d93a4aa46427395b2f1fa, type: 3}
+      propertyPath: InitialModule.startSize.maxCurve.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3519925e490d93a4aa46427395b2f1fa, type: 3}
 --- !u!1 &307158104039667018 stripped
@@ -974,7 +1046,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 573c911139b5e734d82b376ab2e1fb07, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 573c911139b5e734d82b376ab2e1fb07, type: 3}
       propertyPath: m_LocalPosition.y
