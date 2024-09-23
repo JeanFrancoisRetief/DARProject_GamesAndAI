@@ -47,7 +47,7 @@ public class EnemyHealth : MonoBehaviour
             scoreScript.TotalEnemies++;
         }
 
-        deathBlood.SetActive(true);
+        deathBlood.SetActive(false);
     }
 
     // Update is called once per frame
@@ -62,9 +62,15 @@ public class EnemyHealth : MonoBehaviour
     public IEnumerator enemeyDeath()
     {
         scoreScript.EnemiesDefeated++;
+        enemyTypeScript.NatObj.SetActive(false);
+        enemyTypeScript.RoachObj.SetActive(false);
+        enemyTypeScript.RatObj.SetActive(false);
+        enemyTypeScript.PrawnObj.SetActive(false);
+        //  enemyTypeScript.CrocObj.SetActive(false);
+
         deathBlood.SetActive(true);
 
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.5f);
 
         gameObject.SetActive(false);
     }
