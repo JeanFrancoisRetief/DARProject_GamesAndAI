@@ -28,6 +28,7 @@ public class DungeonGenerationScript : MonoBehaviour
                 return obligatory ? 2 : 1;
             }
 
+            
             return 0;
         }
     }

@@ -55,13 +55,14 @@ public class EnemyHealth : MonoBehaviour
     {
         if (Health <= 0)
         {
+            
             StartCoroutine(enemeyDeath());
         }
     }
 
     public IEnumerator enemeyDeath()
     {
-        scoreScript.EnemiesDefeated++;
+        //scoreScript.EnemiesDefeated++;
         enemyTypeScript.NatObj.SetActive(false);
         enemyTypeScript.RoachObj.SetActive(false);
         enemyTypeScript.RatObj.SetActive(false);
@@ -71,7 +72,7 @@ public class EnemyHealth : MonoBehaviour
         deathBlood.SetActive(true);
 
         yield return new WaitForSeconds(0.5f);
-
+        scoreScript.EnemiesDefeated++;
         gameObject.SetActive(false);
     }
 
