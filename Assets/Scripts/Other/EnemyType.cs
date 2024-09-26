@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UIElements;
+using static UnityEditor.PlayerSettings;
 
 public class EnemyType : MonoBehaviour
 {
@@ -13,6 +16,12 @@ public class EnemyType : MonoBehaviour
 
     private NavMeshAgent enemyNavMeshAgent;
     private BoxCollider enemyBoxCollider;
+
+    public EnemyMovement enemyMovement;
+    public Transform initialPos;
+    private Vector3 pos1;
+    private Vector3 pos2;
+    public float speed = 1.0f;
 
     public enum Enemy_Type
     {
@@ -28,6 +37,10 @@ public class EnemyType : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        initialPos = gameObject.transform;
+        pos1 = new Vector3(initialPos.position.x - 10, initialPos.position.y, initialPos.position.z);
+        pos1 = new Vector3(initialPos.position.x + 10, initialPos.position.y, initialPos.position.z);
+
         enemyNavMeshAgent = gameObject.GetComponent<NavMeshAgent>();
         enemyBoxCollider = gameObject.GetComponent<BoxCollider>();
 
@@ -73,6 +86,12 @@ public class EnemyType : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (currentEnemyType == Enemy_Type.Croc)
+        {
+            if (enemyMovement.distance <= 20)
+            {
+                transform.position = Vector3.Lerp(pos1, pos2, Mathf.PingPong(Time.time * speed, 1.0f));
+            }
+        }
     }
 }

@@ -64,6 +64,9 @@ MonoBehaviour:
   PrawnObj: {fileID: 3204563861038846922}
   RatObj: {fileID: 1451963359220507661}
   CrocObj: {fileID: 1545924650117895544}
+  enemyMovement: {fileID: 7073577801499165073}
+  initialPos: {fileID: 9171851563455554885}
+  speed: 1
   currentEnemyType: 0
 --- !u!195 &-1088244633340372593
 NavMeshAgent:
