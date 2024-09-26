@@ -19,6 +19,8 @@ public class MenuDemo : MonoBehaviour
             Application.Quit();
         }
 
+
+        /*
         if (Input.GetKeyDown(KeyCode.G))
         {
             OnDemoGameClick();
@@ -27,6 +29,13 @@ public class MenuDemo : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.M))
         {
             OnDemoMapClick();
+        }
+
+        */
+
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
@@ -39,4 +48,34 @@ public class MenuDemo : MonoBehaviour
     {
         SceneManager.LoadScene("DemoSceneMap");
     }
+
+    public void OnLevel4by4Click()
+    {
+        SceneManager.LoadScene("Level4by4");
+    }
+
+    public void OnLevel6by6Click()
+    {
+        SceneManager.LoadScene("Level6by6");
+    }
+    public void OnLevel10by10Click()
+    {
+        SceneManager.LoadScene("Level6by6");
+    }
+
+    public void OnMap4by4Click()
+    {
+        SceneManager.LoadScene("Map4by4");
+    }
+
+    public void OnMap6by6Click()
+    {
+        SceneManager.LoadScene("Map6by6");
+    }
+    public void OnMap10by10Click()
+    {
+        SceneManager.LoadScene("Map10by10");
+    }
+
+
 }
