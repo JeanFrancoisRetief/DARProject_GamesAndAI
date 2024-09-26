@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public int Health = 100;
     private int frameCounter;
+    private int frameCounter2;
 
     public GameObject BloodSplatterImage1;
     public GameObject BloodSplatterImage2;
@@ -28,7 +29,7 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         frameCounter = 0;
-
+        frameCounter2 = 0;
     }
 
     // Update is called once per frame
@@ -272,4 +273,43 @@ public class PlayerHealth : MonoBehaviour
 
         }
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Enemy")
+        {
+            frameCounter2++;
+            frameCounter = 0;
+
+            EnemyType enemyType = other.GetComponent<EnemyType>();
+
+            if(frameCounter2 >= 60*1)
+            {
+                if (enemyType.currentEnemyType == EnemyType.Enemy_Type.Nat)
+                {
+                    //Health -= 1;
+                }
+                if (enemyType.currentEnemyType == EnemyType.Enemy_Type.Roach)
+                {
+                    Health -= 2;
+                }
+                if (enemyType.currentEnemyType == EnemyType.Enemy_Type.Prawn)
+                {
+                    Health -= 5;
+                }
+                if (enemyType.currentEnemyType == EnemyType.Enemy_Type.Rat)
+                {
+                    Health -= 7;
+                }
+                if (enemyType.currentEnemyType == EnemyType.Enemy_Type.Croc)
+                {
+                    //Health -= 20;
+                }
+                frameCounter2 = 0;
+            }
+            
+
+        }
+    }
+
 }
