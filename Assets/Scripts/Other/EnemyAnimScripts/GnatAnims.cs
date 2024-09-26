@@ -6,6 +6,7 @@ public class GnatAnims : MonoBehaviour
 {
     public EnemyMovement enemyScript;
     public Animator gnatAnimator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,14 @@ public class GnatAnims : MonoBehaviour
         else
         {
             gnatAnimator.SetBool("AttackRange", true);
+            StartCoroutine(gnatSound());
         }
+    }
+
+    public IEnumerator gnatSound()
+    {
+        enemyScript.gnatSound.Play();
+
+        yield return new WaitForSeconds(1.5f);
     }
 }

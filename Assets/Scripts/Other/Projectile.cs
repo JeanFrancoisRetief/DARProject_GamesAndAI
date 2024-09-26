@@ -20,6 +20,9 @@ public class Projectile : MonoBehaviour
     private int framecounter;
     public Text ammoText;
 
+    [Header("Audio")]
+    public AudioScript audioScript;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,6 +66,8 @@ public class Projectile : MonoBehaviour
         Rigidbody bulletRB = bullet.GetComponent<Rigidbody>();
         bulletRB.AddForce(bulletRB.transform.forward * Speed);
         Destroy(bullet, 5f);
+
+        audioScript.webShoot.Play();
 
         ammoCount--;
 

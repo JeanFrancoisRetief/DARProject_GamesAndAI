@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -33,6 +34,9 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask whatIsGround;
     public bool grounded;
 
+    [Header("Audio")]
+    public AudioScript audioScript;
+
     //[Header("Flight")]
     //public bool inFlight;
     //public float flightTimer;
@@ -63,6 +67,10 @@ public class PlayerMovement : MonoBehaviour
             moveSpeed = walkSpeed;
         }
 
+        if (verticalInput > 0 || horizontalInput > 0)
+        {
+            //StartCoroutine(spiderWalk());
+        }
 
 
         MyInput();
@@ -129,6 +137,17 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector3(limitedVelocity.x, rb.velocity.y, limitedVelocity.z);
         }
     }
+
+    //public IEnumerator spiderWalk()
+    //{
+    //    audioScript.spiderWalk.Play();
+
+    //    yield return new WaitForSeconds(1f);
+
+    //    audioScript.spiderWalk.Stop();
+        
+    //    yield return new WaitForSeconds(0.1f);
+    //}
 
     private void Jump()
     {

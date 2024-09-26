@@ -9,6 +9,9 @@ public class EnemyMovement : MonoBehaviour
     GameObject Player;
     public float distance;
 
+    [Header("Audio")]
+    public AudioSource gnatSound;
+
     // Start is called before the first frame update
     void Start()
     {
