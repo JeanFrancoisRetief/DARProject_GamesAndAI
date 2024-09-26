@@ -9,19 +9,19 @@ public class CrocAnims : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        crocAnimator.SetBool("InRange", false);
+        crocAnimator.SetBool("inRange", false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (enemyScript.distance > 20)
+        if (enemyScript.distance > 40)
         {
-            crocAnimator.SetBool("InRange", false);
+            crocAnimator.SetBool("inRange", false);
         }
         else
         {
-            crocAnimator.SetBool("InRange", true);
+            crocAnimator.SetBool("inRange", true);
         }
     }
 }

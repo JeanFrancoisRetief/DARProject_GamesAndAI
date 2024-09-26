@@ -19,8 +19,8 @@ public class EnemyType : MonoBehaviour
 
     public EnemyMovement enemyMovement;
     public Transform initialPos;
-    private Vector3 pos1;
-    private Vector3 pos2;
+    public Transform pos1;
+    public Transform pos2;
     public float speed = 1.0f;
 
     public enum Enemy_Type
@@ -37,9 +37,9 @@ public class EnemyType : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        initialPos = gameObject.transform;
-        pos1 = new Vector3(initialPos.position.x - 10, initialPos.position.y, initialPos.position.z);
-        pos1 = new Vector3(initialPos.position.x + 10, initialPos.position.y, initialPos.position.z);
+        //initialPos = gameObject.transform;
+        //pos1 = new Vector3(initialPos.position.x - 10, initialPos.position.y, initialPos.position.z);
+        //pos1 = new Vector3(initialPos.position.x + 10, initialPos.position.y, initialPos.position.z);
 
         enemyNavMeshAgent = gameObject.GetComponent<NavMeshAgent>();
         enemyBoxCollider = gameObject.GetComponent<BoxCollider>();
@@ -79,7 +79,7 @@ public class EnemyType : MonoBehaviour
             enemyNavMeshAgent.speed = 0;
 
             enemyBoxCollider.center = new Vector3(0, 5, 0); 
-            enemyBoxCollider.size = new Vector3(20, 20, 40);
+            enemyBoxCollider.size = new Vector3(20, 20, 80);
         }
     }
 
@@ -88,10 +88,24 @@ public class EnemyType : MonoBehaviour
     {
         if (currentEnemyType == Enemy_Type.Croc)
         {
-            if (enemyMovement.distance <= 20)
+            if (enemyMovement.distance <= 40)
             {
-                transform.position = Vector3.Lerp(pos1, pos2, Mathf.PingPong(Time.time * speed, 1.0f));
+                transform.position = Vector3.Lerp(pos1.position, pos2.position, Mathf.PingPong(Time.time * speed, 1.0f));
             }
         }
     }
+
+
+    /*
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Player")
+        {
+            initialPos = gameObject.transform;
+            pos1 = new Vector3(initialPos.position.x - 10, initialPos.position.y, initialPos.position.z);
+            pos1 = new Vector3(initialPos.position.x + 10, initialPos.position.y, initialPos.position.z);
+        }
+        
+    }
+    */
 }
