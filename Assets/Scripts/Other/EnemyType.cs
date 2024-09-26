@@ -9,7 +9,7 @@ public class EnemyType : MonoBehaviour
     public GameObject RoachObj;
     public GameObject PrawnObj;
     public GameObject RatObj;
-    //public GameObject CrocObj;
+    public GameObject CrocObj;
 
     private NavMeshAgent enemyNavMeshAgent;
     private BoxCollider enemyBoxCollider;
@@ -62,10 +62,11 @@ public class EnemyType : MonoBehaviour
         }
         if (currentEnemyType == Enemy_Type.Croc)
         {
-            //CrocObj.SetActive(true);
+            CrocObj.SetActive(true);
+            enemyNavMeshAgent.speed = 0;
 
             enemyBoxCollider.center = new Vector3(0, 5, 0); 
-            enemyBoxCollider.size = new Vector3(20, 20, 20);
+            enemyBoxCollider.size = new Vector3(20, 20, 40);
         }
     }
 
