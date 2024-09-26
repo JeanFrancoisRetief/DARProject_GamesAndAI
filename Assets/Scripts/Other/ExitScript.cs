@@ -18,7 +18,12 @@ public class ExitScript : MonoBehaviour
         //simple "Press esc key" then exit program - so as not to use task manager to end program
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Application.Quit();
+            SceneManager.LoadScene("Menu");
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 

@@ -3585,7 +3585,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977671158}
-  m_LocalRotation: {x: 0.40269902, y: -0.000000029313226, z: 0.000000012896306, w: 0.91533244}
+  m_LocalRotation: {x: 0.40269905, y: 0.000000010729387, z: -0.0000000047203774, w: 0.91533244}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5303,7 +5303,10 @@ MonoBehaviour:
     Left Click
     - Shoot
 
-    R - Reload Current Scene
+    R - Reload Current Scene (lose progress)
+
+    Esc - Go to Menu (lose
+    progress)
 
 '
 --- !u!222 &1547044396
@@ -5325,6 +5328,7 @@ GameObject:
   - component: {fileID: 1636508185}
   - component: {fileID: 1636508184}
   - component: {fileID: 1636508186}
+  - component: {fileID: 1636508187}
   m_Layer: 0
   m_Name: ScriptHolder
   m_TagString: Untagged
@@ -5339,7 +5343,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1636508183}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 359f6b2734a9896418abae7801851925, type: 3}
   m_Name: 
@@ -5377,6 +5381,18 @@ MonoBehaviour:
   enemiesDefeatedText: {fileID: 691760009}
   drainsBlockedText: {fileID: 1265065014}
   FinalScore: 0
+--- !u!114 &1636508187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636508183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cc3fbcb60134fc41b4705414661332e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1638821921
 GameObject:
   m_ObjectHideFlags: 0

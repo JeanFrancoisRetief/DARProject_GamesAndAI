@@ -63,6 +63,7 @@ public class MenuDemo : MonoBehaviour
         SceneManager.LoadScene("Level6by6");
     }
 
+    /*
     public void OnMap4by4Click()
     {
         SceneManager.LoadScene("Map4by4");
@@ -76,6 +77,7 @@ public class MenuDemo : MonoBehaviour
     {
         SceneManager.LoadScene("Map10by10");
     }
+    */
 
 
 }
