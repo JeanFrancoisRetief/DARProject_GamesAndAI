@@ -10,11 +10,32 @@ public class WaterBurst : MonoBehaviour
     private GameObject scriptHolderObj;
     private Score scoreScript;
 
+    public AudioSource warterrunningSound;
+
+    GameObject Player;
+    public float distance;
+
     void Start()
     {
         scriptHolderObj = GameObject.Find("ScriptHolder");
         scoreScript = scriptHolderObj.GetComponent<Score>();
         scoreScript.TotalDrains++;
+        Player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    private void Update()
+    {
+        
+        distance = Vector3.Distance(Player.transform.position, transform.position);
+        if(distance < 25)
+        {
+            warterrunningSound.mute = false;
+        }
+        else
+        {
+            warterrunningSound.mute = true;
+        }
+        
     }
 
 
@@ -28,7 +49,7 @@ public class WaterBurst : MonoBehaviour
 
             //++ pipe bursts covered - add later
             scoreScript.DrainsBlocked++;
-
+            //warterrunningSound.mute = true;
             other.gameObject.SetActive(false);
         }
     }
