@@ -5956,8 +5956,8 @@ MonoBehaviour:
     maxPosition: {x: 0, y: 0}
     obligatory: 1
   - room: {fileID: 1490987690650036324, guid: cb609c0d1c9b1ee4cafa46cf69f6d1da, type: 3}
-    minPosition: {x: 1, y: 0}
-    maxPosition: {x: 1, y: 0}
+    minPosition: {x: 9, y: 9}
+    maxPosition: {x: 9, y: 9}
     obligatory: 1
   - room: {fileID: 1490987690650036324, guid: 7f8cecd0eb0e76e4abae3ffd209e4364, type: 3}
     minPosition: {x: 0, y: 0}
@@ -6699,7 +6699,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 7ccd8a80225ddaa47b1404930a98bf24, type: 2}
     - target: {fileID: 6881957007723184273, guid: ec2aa988e59a5784faea2a384b0a778b, type: 3}
       propertyPath: Health
-      value: 10000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6881957007723184273, guid: ec2aa988e59a5784faea2a384b0a778b, type: 3}
       propertyPath: BloodDrops1

@@ -95,7 +95,6 @@ public class EnemyType : MonoBehaviour
         }
     }
 
-
     /*
     private void OnTriggerEnter(Collider other)
     {

@@ -868,6 +868,7 @@ MonoBehaviour:
   pos1: {fileID: 0}
   pos2: {fileID: 0}
   speed: 1
+  crocProjectile: {fileID: 6427068155979662978}
   currentEnemyType: 0
 --- !u!195 &-1088244633340372593
 NavMeshAgent:
@@ -924,6 +925,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 0
   enemyTypeScript: {fileID: 8107039195329501528}
+  enemyMovement: {fileID: 0}
   deathBlood: {fileID: 307158104039667018}
 --- !u!65 &6479443693570684570
 BoxCollider:
@@ -1335,14 +1337,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34467ad45186092418fe9cef9d4b4941, type: 3}
---- !u!4 &2824660176508160368 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 34467ad45186092418fe9cef9d4b4941, type: 3}
-  m_PrefabInstance: {fileID: 2358069860946898587}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3204563861038846922 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 34467ad45186092418fe9cef9d4b4941, type: 3}
+  m_PrefabInstance: {fileID: 2358069860946898587}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2824660176508160368 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 34467ad45186092418fe9cef9d4b4941, type: 3}
   m_PrefabInstance: {fileID: 2358069860946898587}
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &6453539056228533588
@@ -1964,6 +1966,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f001243a5e1470042a533459ee273186, type: 3}
+--- !u!1 &6427068155979662978 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7878998712306217301, guid: f001243a5e1470042a533459ee273186, type: 3}
+  m_PrefabInstance: {fileID: 3775806467309909975}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4134666977217990066
 PrefabInstance:
   m_ObjectHideFlags: 0
