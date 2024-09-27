@@ -33,5 +33,14 @@ public class RatAnims : MonoBehaviour
         {
             ratAnimator.SetBool("AttackRange", true);
         }
+
+        if (enemyScript.distance < 3)
+        {
+            enemyScript.ratSound.mute = false;
+        }
+        else
+        {
+            enemyScript.ratSound.mute = true;
+        }
     }
 }

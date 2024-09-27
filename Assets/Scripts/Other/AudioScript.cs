@@ -5,9 +5,11 @@ using UnityEngine;
 public class AudioScript : MonoBehaviour
 {
     [Header("Spider Sounds")]
-    public AudioSource spiderWalk;
+    public AudioSource spiderWalkSound;
     public AudioSource webShoot;
 
-    [Header("Enemy")]
-    public AudioSource gnat;
+    void Start()
+    {
+        spiderWalkSound.mute = true;
+    }
 }

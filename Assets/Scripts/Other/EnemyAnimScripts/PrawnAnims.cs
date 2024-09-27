@@ -34,5 +34,14 @@ public class PrawnAnims : MonoBehaviour
             prawnAnimator.SetBool("AttackRange", true);
             prawnAnimator.SetBool("InRange", true);
         }
+
+        if (enemyScript.distance < 10)
+        {
+            enemyScript.prawnSound.mute = false;
+        }
+        else
+        {
+            enemyScript.prawnSound.mute = true;
+        }
     }
 }

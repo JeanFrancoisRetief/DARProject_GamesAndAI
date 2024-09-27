@@ -6,10 +6,11 @@ public class RoachAnims : MonoBehaviour
 {
     public EnemyMovement enemyScript;
     public Animator roachAnimator;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -23,7 +24,7 @@ public class RoachAnims : MonoBehaviour
         {
             roachAnimator.SetBool("InRange", true);
         }
-        
+
         if(enemyScript.distance < 20 && enemyScript.distance > 5)
         {
             roachAnimator.SetBool("AttackRange", false);
@@ -31,6 +32,15 @@ public class RoachAnims : MonoBehaviour
         else
         {
             roachAnimator.SetBool("AttackRange", true);
+        }
+
+        if (enemyScript.distance < 3)
+        {
+            enemyScript.roachSound.mute = false;
+        }
+        else
+        {
+            enemyScript.roachSound.mute = true;
         }
     }
 }

@@ -6,6 +6,7 @@ public class EnemyHealth : MonoBehaviour
 {
     public int Health;
     public EnemyType enemyTypeScript;
+    public EnemyMovement enemyMovement;
     public GameObject deathBlood;
 
     private GameObject scriptHolderObj;
@@ -69,7 +70,15 @@ public class EnemyHealth : MonoBehaviour
         enemyTypeScript.PrawnObj.SetActive(false);
         //  enemyTypeScript.CrocObj.SetActive(false);
 
+        if (enemyTypeScript.currentEnemyType == EnemyType.Enemy_Type.Croc)
+        {
+            enemyMovement.crocSound1.mute = false;
+        }
+
+        yield return new WaitForSeconds(0.5f);
+
         deathBlood.SetActive(true);
+
 
         yield return new WaitForSeconds(0.5f);
         scoreScript.EnemiesDefeated++;

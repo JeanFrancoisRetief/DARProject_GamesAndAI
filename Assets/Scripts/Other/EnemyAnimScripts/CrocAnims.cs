@@ -18,10 +18,12 @@ public class CrocAnims : MonoBehaviour
         if (enemyScript.distance > 40)
         {
             crocAnimator.SetBool("inRange", false);
+            enemyScript.crocSound2.mute = true;
         }
         else
         {
             crocAnimator.SetBool("inRange", true);
+            enemyScript.crocSound2.mute = false;
         }
     }
 }

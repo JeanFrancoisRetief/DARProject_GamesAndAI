@@ -12,8 +12,8 @@ public class PlayerMovement : MonoBehaviour
 
     public Transform orientation;
 
-    float horizontalInput;
-    float verticalInput;
+    public float horizontalInput;
+    public float verticalInput;
 
     Vector3 movementDirection;
 
@@ -67,11 +67,14 @@ public class PlayerMovement : MonoBehaviour
             moveSpeed = walkSpeed;
         }
 
-        if (verticalInput > 0 || horizontalInput > 0)
+        if (verticalInput != 0 || horizontalInput != 0)
         {
-            //StartCoroutine(spiderWalk());
+            audioScript.spiderWalkSound.mute = false;
         }
-
+        else
+        {
+            audioScript.spiderWalkSound.mute = true;
+        }
 
         MyInput();
 
@@ -140,13 +143,7 @@ public class PlayerMovement : MonoBehaviour
 
     //public IEnumerator spiderWalk()
     //{
-    //    audioScript.spiderWalk.Play();
-
-    //    yield return new WaitForSeconds(1f);
-
-    //    audioScript.spiderWalk.Stop();
-        
-    //    yield return new WaitForSeconds(0.1f);
+    //    audioScript.spiderWalkSound.Play();
     //}
 
     private void Jump()

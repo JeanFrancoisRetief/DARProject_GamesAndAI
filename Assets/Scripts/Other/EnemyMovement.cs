@@ -11,12 +11,24 @@ public class EnemyMovement : MonoBehaviour
 
     [Header("Audio")]
     public AudioSource gnatSound;
+    public AudioSource roachSound;
+    public AudioSource ratSound;
+    public AudioSource prawnSound;
+    public AudioSource crocSound1;
+    public AudioSource crocSound2;
 
     // Start is called before the first frame update
     void Start()
     {
         Enemy = GetComponent<NavMeshAgent>();
         Player = GameObject.FindGameObjectWithTag("Player");
+
+        gnatSound.mute = true;
+        roachSound.mute = true;
+        ratSound.mute = true;
+        prawnSound.mute = true;
+        crocSound1.mute = true;
+        crocSound2.mute = true;
     }
 
     // Update is called once per frame

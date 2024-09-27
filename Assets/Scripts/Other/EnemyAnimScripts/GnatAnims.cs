@@ -19,18 +19,14 @@ public class GnatAnims : MonoBehaviour
         if (enemyScript.distance > 6)
         {
             gnatAnimator.SetBool("AttackRange", false);
+
+            enemyScript.gnatSound.mute = true;
         }
         else
         {
             gnatAnimator.SetBool("AttackRange", true);
-            StartCoroutine(gnatSound());
+
+            enemyScript.gnatSound.mute = false;
         }
-    }
-
-    public IEnumerator gnatSound()
-    {
-        enemyScript.gnatSound.Play();
-
-        yield return new WaitForSeconds(1.5f);
     }
 }
