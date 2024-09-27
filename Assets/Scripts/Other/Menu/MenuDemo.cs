@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuDemo : MonoBehaviour
 {
+    public GameObject CreditsPanel;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     // Update is called once per frame
@@ -60,7 +63,19 @@ public class MenuDemo : MonoBehaviour
     }
     public void OnLevel10by10Click()
     {
-        SceneManager.LoadScene("Level6by6");
+        SceneManager.LoadScene("Level10by10");
+    }
+
+    public void OnCreditButtonClick()
+    {
+        if(CreditsPanel.active == true)
+        {
+            CreditsPanel.SetActive(false);
+        }
+        else
+        {
+            CreditsPanel.SetActive(true);
+        }    
     }
 
     /*

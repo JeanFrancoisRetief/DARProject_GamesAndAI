@@ -11,6 +11,7 @@ public class WaterBurst : MonoBehaviour
     private Score scoreScript;
 
     public AudioSource warterrunningSound;
+    public AudioSource warterPluggingSound;
 
     GameObject Player;
     public float distance;
@@ -44,6 +45,8 @@ public class WaterBurst : MonoBehaviour
     {
         if (other.tag == "Web")
         {
+            warterPluggingSound.Play(0);
+
             hole.SetActive(false);
             webCover.SetActive(true);
 

@@ -28,6 +28,8 @@ public class Projectile : MonoBehaviour
     {
         ammoCount = 8;
         framecounter = 0;
+
+        
     }
 
     // Update is called once per frame

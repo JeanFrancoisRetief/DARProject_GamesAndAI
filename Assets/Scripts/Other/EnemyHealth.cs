@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -58,6 +59,10 @@ public class EnemyHealth : MonoBehaviour
         {
             
             StartCoroutine(enemeyDeath());
+            if (enemyTypeScript.currentEnemyType == EnemyType.Enemy_Type.Croc)
+            {
+                SceneManager.LoadScene("Credits");
+            }
         }
     }
 
@@ -68,7 +73,7 @@ public class EnemyHealth : MonoBehaviour
         enemyTypeScript.RoachObj.SetActive(false);
         enemyTypeScript.RatObj.SetActive(false);
         enemyTypeScript.PrawnObj.SetActive(false);
-        //  enemyTypeScript.CrocObj.SetActive(false);
+        enemyTypeScript.CrocObj.SetActive(false);
 
         if (enemyTypeScript.currentEnemyType == EnemyType.Enemy_Type.Croc)
         {
