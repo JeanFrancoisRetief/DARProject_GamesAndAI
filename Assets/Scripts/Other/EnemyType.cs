@@ -56,7 +56,7 @@ public class EnemyType : MonoBehaviour
             RoachObj.SetActive(true);
 
             enemyBoxCollider.center = new Vector3(0, 0.5f, 0);
-            enemyBoxCollider.size = new Vector3(2, 4, 4);
+            enemyBoxCollider.size = new Vector3(2, 8, 4);
         }
         if (currentEnemyType == Enemy_Type.Prawn)
         {
@@ -79,7 +79,7 @@ public class EnemyType : MonoBehaviour
             enemyNavMeshAgent.speed = 0;
 
             enemyBoxCollider.center = new Vector3(0, 5, 0); 
-            enemyBoxCollider.size = new Vector3(20, 20, 80);
+            enemyBoxCollider.size = new Vector3(20, 20, 60);
         }
     }
 

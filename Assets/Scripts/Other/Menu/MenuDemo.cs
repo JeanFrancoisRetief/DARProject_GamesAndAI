@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class MenuDemo : MonoBehaviour
 {
     public GameObject CreditsPanel;
+    public GameObject HintsPanel;
     // Start is called before the first frame update
     void Start()
     {
@@ -76,6 +77,18 @@ public class MenuDemo : MonoBehaviour
         {
             CreditsPanel.SetActive(true);
         }    
+    }
+
+    public void OnHintsButtonClick()
+    {
+        if (HintsPanel.active == true)
+        {
+            HintsPanel.SetActive(false);
+        }
+        else
+        {
+            HintsPanel.SetActive(true);
+        }
     }
 
     /*
