@@ -264,7 +264,7 @@ public class PlayerHealth : MonoBehaviour
             }
             if (enemyType.currentEnemyType == EnemyType.Enemy_Type.Rat)
             {
-                Health -= 15;
+                Health -= 10;
             }
             if (enemyType.currentEnemyType == EnemyType.Enemy_Type.Croc)
             {
@@ -287,7 +287,7 @@ public class PlayerHealth : MonoBehaviour
             {
                 if (enemyType.currentEnemyType == EnemyType.Enemy_Type.Nat)
                 {
-                    //Health -= 1;
+                    Health -= 1;
                 }
                 if (enemyType.currentEnemyType == EnemyType.Enemy_Type.Roach)
                 {
@@ -295,11 +295,11 @@ public class PlayerHealth : MonoBehaviour
                 }
                 if (enemyType.currentEnemyType == EnemyType.Enemy_Type.Prawn)
                 {
-                    Health -= 5;
+                    Health -= 3;
                 }
                 if (enemyType.currentEnemyType == EnemyType.Enemy_Type.Rat)
                 {
-                    Health -= 7;
+                    Health -= 4;
                 }
                 if (enemyType.currentEnemyType == EnemyType.Enemy_Type.Croc)
                 {

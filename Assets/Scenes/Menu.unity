@@ -2325,7 +2325,7 @@ MonoBehaviour:
     Rat Health
     = 10
 
-    Rat Damage = 15
+    Rat Damage = 10
 
 
     Croc Boss Health = 20
